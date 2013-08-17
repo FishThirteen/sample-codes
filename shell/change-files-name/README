@@ -1,0 +1,10 @@
+##批量修改文件名
+将
+foo232-0001.bar
+foo323-0002.bar
+foo333-0003.bar
+
+改为
+foo0001.bar
+foo0002.bar
+foo0003.bar

@@ -1,0 +1,4 @@
+#Target#
+
+Verify the char * could be implictly convert to std::string type.
+
