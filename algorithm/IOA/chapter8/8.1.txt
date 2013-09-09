@@ -1,0 +1,6 @@
+Q: 8.1-1
+A: The small possible depth is n, when A1 <= A2 <= A3 ...
+
+
+
+
