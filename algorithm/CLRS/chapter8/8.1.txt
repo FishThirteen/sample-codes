@@ -1,0 +1,11 @@
+Q: 8.1-1
+A: The small possible depth is n, when A1 <= A2 <= A3 ...
+
+Q: 8.1-2
+A: Resolve in paper. (A lot of formuler)
+   Using mathmatical induction directly or separate the summation to even summation and odd summation
+
+Q: 8.1-3
+A: h is the height of the portion of the decision tree. we have the 2^h >= m through the Theorem 8.1. The m is equal to n!/2, n!/n and n!/(2^n). So the h is asymptotic with  nlgn
+
+
