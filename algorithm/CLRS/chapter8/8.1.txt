@@ -8,4 +8,7 @@ A: Resolve in paper. (A lot of formuler)
 Q: 8.1-3
 A: h is the height of the portion of the decision tree. we have the 2^h >= m through the Theorem 8.1. The m is equal to n!/2, n!/n and n!/(2^n). So the h is asymptotic with  nlgn
 
+Q: 8.1-4
+A: The lower bound of each group need O(k*lgk). The number of group is n/k. So the lower bound of all node is O((n/k)*(k*lgk)) + O(cn), equal to O(n*lgk) 
+
 
