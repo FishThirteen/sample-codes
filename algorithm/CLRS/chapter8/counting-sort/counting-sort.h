@@ -6,6 +6,6 @@ class CountingSort
 {
 public:
     static void sort(int *input, int *result, size_t size, int max);
-}
+};
 
 #endif

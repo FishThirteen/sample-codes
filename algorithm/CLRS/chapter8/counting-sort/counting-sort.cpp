@@ -1,21 +1,23 @@
 #include <memory>
-#include "counting-sort.cpp"
+#include "counting-sort.h"
+
+using std::unique_ptr;
 
 void CountingSort::sort(int *input, int* result, size_t size, int max)
 {
-    unique_ptr<int[]> temp = new unique_ptr<int[]>(new int[max]);
+    unique_ptr<int[]> temp(new int[max]);
 
-    for (auto index : max)
+    for (size_t i = 0; i < static_cast<size_t>(max); i++)
     {
-        temp[index]  = 0;
+        temp[i]  = 0;
     }
 
-    for (auto index : size) 
+    for (size_t i = 0; i < size; i++)
     {
-        temp[input[index]] = temp[input[index]] + 1;
+        temp[input[i]] = temp[input[i]] + 1;
     }
 
-    for (size_t i = size - 1; i > -1 i--)
+    for (size_t i = size - 1; i >= 0; i--)
     {
         result[temp[input[i]]] = input[i];
     }
