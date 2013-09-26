@@ -28,12 +28,14 @@ int main(int argc, char* argv[])
 
     for (int i = 0; i < 5; i++)
     {
-        printf("%d", a[i]);
+        printf("%d", result[i]);
 
         if (i < 4)
         {
             printf(", ");
         }
     }
+
+    printf("\n");
 
 }

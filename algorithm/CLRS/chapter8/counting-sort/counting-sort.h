@@ -5,7 +5,7 @@
 class CountingSort
 {
 public:
-    static void sort(int *input, int *result, size_t size, int max);
+    static void sort(int *input, int *result, int size, int max);
 };
 
 #endif
