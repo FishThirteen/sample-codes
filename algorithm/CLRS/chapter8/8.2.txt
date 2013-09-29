@@ -1,2 +1,12 @@
 Q: 8.2-1
 A: programming
+
+Q: 8.2-2
+A: For each identity value, the later value is placed after the later location. Because counting sort pick number from the end of the array and sub 1 for the location.
+
+Q: 8.2-3
+A:  
+
+Q: 8.2-4
+A: Programming
+
