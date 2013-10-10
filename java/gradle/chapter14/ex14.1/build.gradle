@@ -1,0 +1,17 @@
+classesDir = new File('build/classes')
+
+task resources << {
+    classesDir.mkdirs()
+    println 'Create class directory'
+}
+
+task compile(dependsOn: 'resources') << {
+    if (classesDir.isDirectory()) {
+        println 'Directory exists. I can operate.'
+    }
+    else {
+        println 'You need to create directory!'
+    }
+
+    
+}
