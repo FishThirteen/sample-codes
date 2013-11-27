@@ -12,11 +12,11 @@ public class ExampleBean {
         System.out.println("ExampleBean");
     }
 
-    public void SetBeanOne(AnotherBean bean) {
+    public void setBeanOne(AnotherBean bean) {
         this.beanOne = bean;
     }
 
-    public void SetBeanTwo(YetAnotherBean bean) {
+    public void setBeanTwo(YetAnotherBean bean) {
         this.beanTwo = bean; 
     }
 }
