@@ -1,12 +1,5 @@
-apply plugin: 'java'
-
-repositories {
-    mavenCentral()
-    maven { url ("http://repo.spring.io/libs-snapshot") }
-}
-
-dependencies {
-    compile 'org.springframework:spring-context:3.2.5.RELEASE'
-    
-    
+allprojects {
+  task hello << {
+      task -> println "Project Name: $task.project.name"
+  }
 }

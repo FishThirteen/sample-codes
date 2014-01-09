@@ -1,0 +1,38 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd 
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd" >
+
+  <context:annotation-config />
+
+  <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" >
+    <property name="locations" value="jdbc.properties" />
+  </bean>
+
+  <bean id="exampleBean" class="example.ExampleBean" init-method="init" >
+    <property name="BeanOne" ref="anotherBean" />
+    <property name="BeanTwo" ref="yetAnotherBean" />
+    <property name="ManyBeans" >
+        <list>
+            <ref bean="anotherBeans" />
+            <ref bean="anotherBeans" />
+            <ref bean="anotherBeans" />
+            <ref bean="anotherBean" />
+        </list>
+    </property>
+  </bean>
+  <bean id="anotherBean" class="example.AnotherBean" />
+  <bean id="yetAnotherBean" class="example.YetAnotherBean" />
+  <bean id="anotherBeans" class="example.AnotherBean" scope="prototype" />
+  <bean class="example.InstantiationTracingBeanPostProcessor" />
+
+  <bean class="example.JdbcInfo" init-method="run" >
+    <property name="DriverName" value="${jdbc.driverClassName}" />
+    <property name="Url" value="${jdbc.url}" />
+    <property name="UserName" value="${jdbc.username}" />
+  </bean>
+</beans>

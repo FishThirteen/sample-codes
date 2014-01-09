@@ -1,0 +1,15 @@
+repositories {
+    mavenCentral()
+    maven { url ("http://repo.spring.io/libs-snapshot") }
+}
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName='example.ExampleMain'
+
+dependencies {
+    compile 'org.springframework:spring-context:4.0.0.RELEASE'
+    
+    
+}
