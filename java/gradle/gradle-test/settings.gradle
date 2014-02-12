@@ -1,0 +1,2 @@
+include "gradle-test-1"
+include "gradle-test-2"

@@ -1,0 +1,46 @@
+repositories {
+  mavenCentral()
+  maven { url ("http://repo.spring.io/libs-snapshot") }
+}
+
+apply plugin: 'java'
+apply plugin: TestPlugin
+
+class TestPlugin implements Plugin<Project> {
+  void apply(Project project) {
+    project.extensions.create("syntastic", SyntasticData)
+
+    def classPathCollection = new HashSet<String>()
+
+    def addPath = { proj ->
+      if (proj.plugins.hasPlugin("java")) {
+        proj.configurations.compile.each { jar ->
+            classPathCollection.add(jar);
+          }
+        }
+
+      proj.sourceSets.each { srcSet ->
+        srcSet.java.srcDirs.each { dir ->
+          classPathCollection.add(dir.absolutePath)
+        }
+      }
+    }
+
+    project.task("SyntasticJava") << {
+      project.allprojects.each { proj -> 
+        addPath(proj) 
+      }
+
+      new File(project.projectDir.absolutePath + "/" + "${project.syntastic.classpathFile}").text = classPathCollection.collect().join("\n")
+    }
+  }
+} 
+
+class SyntasticData {
+  def String classpathFile = ".syntastic-classpath"
+}
+
+
+dependencies {
+ compile 'org.springframework:spring-context:4.0.0.RELEASE', 'org.aspectj:aspectjrt:1.7.4', 'org.aspectj:aspectjweaver:1.7.4'
+}
