@@ -1,3 +1,9 @@
+buildscript {
+  dependencies {
+    classpath files('libs/vim-syntastic-java-gradle-plugin-1.0.0.jar')
+  }
+}
+
 repositories {
   mavenCentral()
   maven { url ("http://repo.spring.io/libs-snapshot") }
@@ -5,11 +11,8 @@ repositories {
 
 apply plugin: "java"
 apply plugin: "application"
+apply plugin: 'vimsyntasticjava'
 
-
-task copyAllDependencies(type: Copy) {
-  
-}
 
 mainClassName='org.example.Main'
 

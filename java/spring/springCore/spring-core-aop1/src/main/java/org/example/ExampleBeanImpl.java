@@ -21,7 +21,9 @@ public class ExampleBeanImpl implements ExampleBean {
   }
 
   @Override
+  @Auditable( auditType = AuditType.Normal)
   public void acquireFile(Account account, String fileName) {
     System.out.println("ExampleBeanImpl.acquireFile()");
   }
+
 }

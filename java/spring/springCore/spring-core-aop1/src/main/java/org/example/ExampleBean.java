@@ -7,5 +7,4 @@ public interface ExampleBean {
   public String aroundOne();
 
   public void acquireFile(Account account, String fileName);
-  
 }
