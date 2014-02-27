@@ -1,2 +1,3 @@
 build/
 .syntastic-classpath
+!libs/
