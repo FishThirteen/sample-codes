@@ -1,11 +1,21 @@
 package org.example.contacts.model;
 
-import java.io.IOException;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+import java.lang.SuppressWarnings;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+@SuppressWarnings({"rawtypes", "unchecked"})
+public class ContactList {
+  private List innerList = new LinkedList();
 
+  public List getContacts () {
+    return innerList;
+  }
 
+  
+  public void addContact(Contact contact) {
+    innerList.add(contact);
+  }
+}
 
