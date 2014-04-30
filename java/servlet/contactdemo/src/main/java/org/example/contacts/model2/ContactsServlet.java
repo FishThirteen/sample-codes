@@ -23,7 +23,6 @@ public class ContactsServlet extends HttpServlet {
     String path = request.getServletPath();
 
     return path.substring(1, path.lastIndexOf("."));
-
   }
 
   @Override
@@ -34,7 +33,6 @@ public class ContactsServlet extends HttpServlet {
 
       if (url != null) {
         getServletContext().getRequestDispatcher(url).forward(request, response);
-
       }
   }
 }

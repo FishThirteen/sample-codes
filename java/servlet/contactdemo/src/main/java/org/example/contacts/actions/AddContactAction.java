@@ -19,7 +19,7 @@ public class AddContactAction implements Action {
 
     session.setAttribute("contacts", contacts);
     
-    return "/contactList.jsp";
+    return "/contacts.jsp";
   }
 
   public void writeToResponseStream(HttpServletResponse response, String output) {

@@ -1,11 +1,12 @@
 package org.example.contacts.model;
 
 public class RequestParameters {
-  public static String FIRSTNAME = "";
-  public static String LASTNAME = "";
-  public static String STREET = "";
-  public static String CITY = "";
-  public static String STATE = "";
-  public static String ZIP = "";
-  public static String TYPE = "";
+  public static String ID = "id";
+  public static String FIRSTNAME = "firstname";
+  public static String LASTNAME = "lastname";
+  public static String STREET = "street";
+  public static String CITY = "city";
+  public static String STATE = "state";
+  public static String ZIP = "zip";
+  public static String TYPE = "type";
 }

@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//w3c//DTD HTML 4.01 Transitional//EN" >
 <%@page import="java.util.*" %>
-<%@page import="org.example.model.*" %>
+<%@page import="org.example.contacts.model.*" %>
 
 <html>
   <head>
@@ -35,11 +35,11 @@
     <%
       List list = contacts.getContacts();
       for (Iterator i = list.iterator(); i.hasNext();) {
-        Contact contact = (Contact)i.next();
+        Contact contact = (Contact) (i.next());
     %>
       <tr>
         <td width="100px" ><a href="removeContactAction.perform?id=<%=contact.getId()%>" >Delete</a></td>
-        <td width="200px" ><%=contact.getFirstName()%> <%=getLastName()%></td>
+        <td width="200px" ><%=contact.getFirstname()%> <%=contact.getLastname()%></td>
         <td width="150px" ><%=contact.getStreet()%></td>
         <td width="100px" ><%=contact.getCity()%></td>
         <td width="100px" ><%=contact.getState()%></td>
@@ -81,7 +81,7 @@
         </tr>
         <tr>
           <td>Zip:</td>
-          <td><input type="text" size="30px" name="city" /></td>
+          <td><input type="text" size="30px" name="zip" /></td>
         </tr>
         <tr>
           <td>Type:</td>
