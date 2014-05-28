@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,6 +23,8 @@ public class MainActivity extends ActionBarActivity implements Button.OnClickLis
     private TextView helloWorldTextView;
 
     private Button testMotionEventButton;
+    private Button testMemoryButton;
+    private Button testDemoImageButton;
 
     private static Logger logger = LoggerFactory.getLogger(MainActivity.class);
 
@@ -38,6 +41,12 @@ public class MainActivity extends ActionBarActivity implements Button.OnClickLis
 
         testMotionEventButton = (Button)findViewById(R.id.test_motion_event_button);
         testMotionEventButton.setOnClickListener(this);
+
+        testMemoryButton = (Button)findViewById(R.id.test_memory_could_be_used_button);
+        testMemoryButton.setOnClickListener(this);
+
+        testDemoImageButton = (Button)findViewById(R.id.test_demo_image_button);
+        testDemoImageButton.setOnClickListener(this);
 
         InitTabs();
 
@@ -77,6 +86,15 @@ public class MainActivity extends ActionBarActivity implements Button.OnClickLis
     @Override
     public void onClick(View view) {
         logger.debug("View id is {}", view.getId());
+
+//        Toast toast1 = Toast.makeText(this, String.format("View id is %1$d", view.get), Toast.LENGTH_SHORT);
+//        toast1.show();
+
+        if (view == testDemoImageButton) {
+            Intent intent = new Intent(this, DemoImageActivity.class);
+            startActivity(intent);
+        }
+
         if (view == testLogCatButton) {
             Logger logger = LoggerFactory.getLogger(this.getClass());
 //            LoggerContext lc  = (LoggerContext)LoggerFactory.getILoggerFactory();
@@ -90,6 +108,13 @@ public class MainActivity extends ActionBarActivity implements Button.OnClickLis
         if (view == testMotionEventButton) {
             Intent intent = new Intent(this, MotionEventTest.class);
             startActivity(intent);
+        }
+
+        if (view == testMemoryButton) {
+            int maxMemory = (int) (Runtime.getRuntime().maxMemory() / (1024 * 1024));
+            Toast toast = Toast.makeText(this, String.format("%1$s MB memory could be used.", maxMemory),
+                    Toast.LENGTH_LONG);
+            toast.show();
         }
 
 

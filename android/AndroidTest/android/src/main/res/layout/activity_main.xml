@@ -28,4 +28,18 @@
         android:layout_below="@id/test_logcat_button"
         android:text="Test Motin Event" />
 
+    <Button
+        android:id="@+id/test_memory_could_be_used_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/test_motion_event_button"
+        android:text="Test Memory Could Be Used" />
+
+    <Button
+        android:id="@+id/test_demo_image_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/test_memory_could_be_used_button"
+        android:text="Test Demo Image" />
+
 </RelativeLayout>

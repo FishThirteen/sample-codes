@@ -20,6 +20,11 @@
             android:name="org.example.androidtest.android.MotionEventTest"
             android:label="@string/title_activity_motion_event_test" >
         </activity>
+        <activity
+            android:name="org.example.androidtest.android.DemoImageActivity"
+            android:label="@string/title_activity_demo_image"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
+        </activity>
     </application>
 
 </manifest>

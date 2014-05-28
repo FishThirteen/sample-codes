@@ -5,5 +5,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_motion_event_test">MotionEventTest</string>
+    <string name="title_activity_demo_image">DemoImageActivity</string>
 
 </resources>
