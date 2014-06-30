@@ -10,6 +10,7 @@ public:
   void printLinkedList();
   void insertNode(Node* node);
   void insertNode(Node* currentNode, Node* newNode);
+  void printTree();
   BSTree();
 
 private:
