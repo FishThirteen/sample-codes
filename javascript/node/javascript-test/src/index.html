@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Your Website</title>
+    <style>
+        .t-c {
+            padding: 10px;        
+        }
+
+        .t-c .tri {
+            display: inline-block;
+            border-top: 50px solid black;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+        }
+
+    </style>
+
+    <style>
+        .holy-c {
+            padding: 0 100px 0 50px;
+            overflow: hidden;
+        }
+        .holy-c .main, .holy-c .left, .holy-c .right {
+            min-height: 150px;
+            float: left;
+        }
+        .holy-c .main {
+            background: yellow;
+            min-height: 300px;
+            width: 100%;
+        }
+
+        .holy-c .left {
+            background: red;
+            width: 50px;
+            margin-left: -100%;
+            position: relative;
+            left: -50px;
+        }
+
+        .holy-c .right {
+            background: blue;
+            width: 100px;
+            margin-left: -100px;
+            position: relative;
+            right: -100px;
+        }
+
+        .color-c {
+            line-height: 20px;
+            font-size: 16px;
+        }
+        .color-c span {
+            padding: 5px;
+            margin: 10px;
+        }
+        .color-c .s1 {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li>Your menu</li>
+			</ul>
+		</nav>
+    </header>
+    
+    <div style="display: flex;flex-flow: row nowrap;padding: 20px;">
+        <div style="flex: 1 0 20%;display: flex;height: 100%;flex-flow: row nowrap;align-content: center;height: 100%;">
+            <div style="flex: 1 1 100%;">xxx, xxx, xxx, xxx, xxx, xxx, xxx, xxx, xxx, xxx, xxx, xxx, xxx, xxx, xxx, xxx</div>
+        </div>
+        <div style="flex: 1 0 80%;">
+           Hello, World!  Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!
+        </div>
+    </div>
+	<section>
+        <div class="color-c">
+            <p>Hello</p>
+            <span class="s1">World</span><span>China</span>
+        </div>
+        <div>
+            <button id="btn-a" value="Button A">ButtonA</button>
+        </div>
+        <div class="t-c">
+            <div class="tri"></div>
+        </div>
+        <div class="holy-c">
+            <div class="main">main</div>
+            <div class="left">left</div>
+            <div class="right">right</div>
+        </div>
+	
+		<article style="overflow: hidden;">
+			<header>
+				<h2>Article title</h2>
+				<p>Posted on <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
+			</header>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+		</article>
+		
+		<article>
+			<header>
+				<h2>Article title</h2>
+				<p>Posted on <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
+			</header>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+		</article>
+		
+	</section>
+
+	<aside>
+		<h2>About section</h2>
+		<p>Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+	</aside>
+
+	<footer>
+		<p>Copyright 2009 Your name</p>
+	</footer>
+
+    <script src="./index1.js"></script>
+</body>
+
+</html>
